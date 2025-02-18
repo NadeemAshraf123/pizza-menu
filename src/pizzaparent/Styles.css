@@ -1,0 +1,101 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Header */
+.header {
+  background-color: #ff4500;
+  color: white;
+  padding: 15px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Menu Section */
+.menu {
+  margin: 20px 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Pizza List */
+.pizza-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Individual Pizza Card */
+.pizzass {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+}
+
+.pizzass img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.pizzass h2 {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.pizzass p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Footer */
+.footer-section {
+  margin-top: 20px;
+  background-color: darkorange;
+  color: white;
+  padding: 10px;
+  /* position: fixed; */
+  /* bottom: 0; */
+  width: 100%;
+}
+.btn {
+  background-color: #0044cc;
+  /* background-color: #1b5e20; */
+}
+.btn:hover {
+  /* background-color: #ffffff; Slightly darker blue */
+  background-color: #003399;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .pizza-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pizzass {
+    width: 90%;
+  }
+
+  .header {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .footer-section {
+    font-size: 14px;
+  }
+}
