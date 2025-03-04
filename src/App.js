@@ -1,9 +1,17 @@
 // import logo from "./logo.svg";
 import "./App.css";
-import ParentPizza from "./pizzaparent/ParentPizza";
+import ParentRouter from "./Components/RouterTopic/ParentRouter";
+// import ParentPizza from "./pizzaparent/ParentPizza";
+// import StateParent from "./Components/stateparent./StateParent";
 
 function App() {
-  return <ParentPizza />;
-}
+  return ( 
+    <> 
+    <ParentRouter />
+  {/* <ParentPizza /> */} 
+  {/* <StateParent />  */}
+  </> 
+) 
+} 
 
-export default App;
+export default App; 

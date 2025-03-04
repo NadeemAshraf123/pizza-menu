@@ -1,0 +1,51 @@
+/* DateCounter.css */
+
+.date-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .steps, .counter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .steps button, .counter button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .steps button:disabled, .counter button:disabled {
+    background-color: #CCC;
+    cursor: not-allowed;
+  }
+  
+  .steps p, .counter p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 10px;
+  }
+  
+  .date-counter p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .date-counter span {
+    color: #333;
+  }
+  
