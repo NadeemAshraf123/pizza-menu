@@ -4,19 +4,25 @@ import BlogHome from './BlogHome'
 import BlogDetails from './BlogDetails'
 import BlogNavbar from './BlogNavbar'
 import Profile from './Profile'
+import {useAuth } from './Auth'
+import Login from './Login'
 
 
 const ParentRouter = () => {
+    const auth = useAuth();
+
     return (
-    
         <BrowserRouter>  
-            {/* <h1> Parent Router </h1> */}
             <BlogNavbar />
             <Routes>
                 <Route path='/' element={ <BlogHome /> } />
                 <Route path='/bloghome' element={ <BlogHome /> } />
                 <Route path='/blogdetails/:id' element={<BlogDetails /> } />
+                { auth.user ? (
                 <Route path='/profile' element={ <Profile /> } /> 
+            ) : (
+                <Route path='/login' element={ <Login /> } /> 
+            )}
             </Routes>
         </BrowserRouter>
     )

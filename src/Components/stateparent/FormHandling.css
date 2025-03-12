@@ -1,0 +1,67 @@
+/* FormHandling.css */
+
+.formStyle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+}
+
+.inputStyle,
+.textareaStyle,
+.selectStyle {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.inputStyle:focus,
+.textareaStyle:focus,
+.selectStyle:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.buttonStyle {
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.buttonStyle:hover {
+    background-color: #0056b3;
+}
+
+.resultStyle {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
