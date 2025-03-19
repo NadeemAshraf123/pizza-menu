@@ -15,19 +15,21 @@ function update(){
 }
 
   return (
-    <div className='app'>
+    <div className='container bg-danger'>
         <h1> How to get value from input feild</h1>
-        <ul className='un-order-list'>
-            <li> get using onchange event handler </li>
-            <li > on button clcik </li>
+        <ul >
+            <li className='text-decoration-none'> get useing them</li>
+            <li > on button click </li>
         </ul>
-        <input type='text' placeholder='enter your text...' onChange={getinput} />
-        <button onClick={update}> update </button>
-            <li>
+        <input className='form-control mb-3' value='' type='text' placeholder='enter your text...' onChange={getinput} />
+        <button className="btn btn-primary" onClick={update}> update </button>
+        <ul>            <li>
                 {data}
             </li>
 
-        <li> {userdata ?  {data}  : null } </li> 
+        <li> {userdata ?  data  : null } </li> 
+        </ul>
+
     </div> 
   ) 
 } 
