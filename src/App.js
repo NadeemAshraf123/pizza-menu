@@ -13,11 +13,17 @@ import Hook3 from "./Components/Hooks/Hook3";
 // import StateParent from "./Components/stateparent/StateParent";
 import ComponentStyle from "./Components/stateparent/ComponentStyle";
 import Booting from "./Components/Hooks/Booting";
+// import ApiCalling from "./Components/Hooks/ApiCalling";
+import CheckData from "./Components/Hooks/CheckData";
+import ToDoList from "./Components/Hooks/ToDoList";
 
 function App() {
   return ( 
     <> 
+    {/* <ToDoList /> */}
     <Booting />
+    <CheckData />
+    {/* <ApiCalling /> */}
     <Hook1 />
     <Hook2 />
     <Hook3 />
