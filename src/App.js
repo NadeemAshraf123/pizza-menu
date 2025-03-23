@@ -15,14 +15,20 @@ import ComponentStyle from "./Components/stateparent/ComponentStyle";
 import Booting from "./Components/Hooks/Booting";
 // import ApiCalling from "./Components/Hooks/ApiCalling";
 import CheckData from "./Components/Hooks/CheckData";
-import ToDoList from "./Components/Hooks/ToDoList";
+import FormWithoutYup from "./Components/Hooks/FormWithoutYup";
+import FormYup from "./Components/Hooks/FormYup";
+import MyForm from "./Components/Hooks/FormYup";
+// import ToDoList from "./Components/Hooks/ToDoList";
 
 function App() {
   return ( 
     <> 
     {/* <ToDoList /> */}
     <Booting />
-    <CheckData />
+    <MyForm />
+    <FormYup />
+    {/* <FormWithoutYup /> */}
+    {/* <CheckData /> */}
     {/* <ApiCalling /> */}
     <Hook1 />
     <Hook2 />
