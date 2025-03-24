@@ -1,83 +1,43 @@
-import React, { useState } from 'react'
-import * as yup from 'yup'
+import React from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 
-const FormYup = () => {
+// Define Yup validation schema
+const schema = yup.object().shape({
+  name: yup.string().required("Name is required"),
+  email: yup.string().email("Invalid email").required("Email is required"),
+});
 
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "" ,
-        password: "",
-    });
-    const [errors, setErrors] = useState({});
+export default function MyForm() {
+  // Destructuring useForm
+  const {
+    register,   // Connects input fields
+    handleSubmit,  // Handles form submission & validation
+    formState: { errors },  // Holds validation errors
+  } = useForm({
+    resolver: yupResolver(schema), // Integrates Yup validation
+  });
 
-    const userSchema = yup.object().shape({
-       name:  yup.string().required("name will be required"),
-      email:   yup.string().email("petter@gmail.com").required("email must be required"),
-       password:  yup.string().min(4, "password must be atleast 4 digits"),
-    });
+  const onSubmit = (data) => {
+    console.log("Form submitted:", data);
+  };
 
-    const handleChange = (e)=>{
-        const {name, value} = e.target;
-        setFormData({...formData, [name]: value});
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div>
+        <label>Name</label>
+        <input {...register("name")} placeholder="Enter your name" />
+        <p>{errors.name?.message}</p>
+      </div>
 
-    };
+      <div>
+        <label>Email</label>
+        <input {...register("email")} placeholder="Enter your email" />
+        <p>{errors.email?.message}</p>
+      </div>
 
-    const handleSubmit = async(e) => {
-        e.preventDefault();
-        try{
-            await userSchema.validate(formData, {abortEarly: false});
-            console.log("Form is valid:", formData);
-            setErrors({});
-        }catch(error){
-            const validationErrors = {};
-            error.inner.forEach((error)=>{
-                validationErrors[error.path] = error.message;
-            });
-            setErrors(validationErrors);
-            console.log("validarion errors:", validationErrors);
-        }
-    }
-
-    return (
-        <div className='container-fluid bg-light text-center'>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <input
-                        type='text'
-                        name='name'
-                        placeholder='Name...'
-                        onChange={handleChange}
-                        value={formData.name}
-                    />
-                    {errors.name && <div style={{color: 'red'}}>{errors.name}</div>}
-                </div>
-                
-                <div>
-                    <input
-                        type='email'
-                        name='email'
-                        placeholder='email@email.com'
-                        onChange={handleChange}
-                        value={formData.email}
-                    />
-                    {errors.email && <div style={{color: 'red'}}>{errors.email}</div>}
-                </div>
-                
-                <div>
-                    <input
-                        type='password'
-                        name='password'
-                        placeholder='password123...'
-                        onChange={handleChange}
-                        value={formData.password}
-                    />
-                    {errors.password && <div style={{color: 'red'}}>{errors.password}</div>}
-                </div>
-
-                <input type='submit' value="Submit" />
-            </form>
-        </div>
-    );
+      <button type="submit">Submit</button>
+    </form>
+  );
 }
-
-export default FormYup;

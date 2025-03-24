@@ -1,0 +1,15 @@
+.custom{
+    background-color:#072F60;
+    
+    /* color: #E6FAFF;
+    text-align: center;
+    padding: 30px; */ 
+}
+.rounded{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color:#072F60;
+    color: white;
+    padding: 30px;
+  }
+  

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+        }
+        .sidebar {
+            width: 25%;
+            background: #1b4b82;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .nav {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            text-align: center;
+            border-radius: 5px;
+            margin: 5px 0;
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .nav a:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        .content {
+            width: 75%;
+            padding: 30px;
+        }
+        .header {
+            background: #1b4b82;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background: #ddd;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                text-align: center;
+            }
+            .content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Company Title Here</h1>
+        <p>Tagline about your company</p>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">LOGO</div>
+            <div class="nav">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="content">
+            <h2>About the Company</h2>
+            <p>History of the company goes here...</p>
+            <h3>Our Areas of Expertise</h3>
+            <p>Details about expertise...</p>
+        </div>
+    </div>
+    <div class="footer">Company Name &copy; 2025</div>
+</body>
+</html>
