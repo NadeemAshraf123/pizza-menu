@@ -47,13 +47,13 @@ export const Sidebar = () => {
                     src={LogoImage} alt="logo"
                 />
             </div>
-            {/* <div style={{}}> */}
                 <Link to='/' style={{ color: 'white', textDecoration: 'none', display: 'flex', marginBottom: '10px', paddingTop: '15px', }}>Home</Link>
                 <Link to='/about' style={{ color: 'white', textDecoration: 'none', display: 'flex', marginBottom: '10px' }}>About Us</Link>
                 <Link to='/services' style={{ color: 'white', textDecoration: 'none', display: 'flex', marginBottom: '10px' }}>Services</Link>
-                <Link to='/client'>Clients</Link>
+                <Link to='/clients' style={{ color: 'white', textDecoration: 'none', display: 'flex', marginBottom: '10px' }}>Clients</Link>
+                <Link to='/contact' style={{ color: 'white', textDecoration: 'none', display: 'flex', marginBottom: '10px' }}>Contact</Link>
 
-            {/* </div> */}
+
         </div>
     )
 };
