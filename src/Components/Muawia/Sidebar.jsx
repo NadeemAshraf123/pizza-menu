@@ -1,60 +1,61 @@
-import react from 'react'
-import { Link } from 'react-router-dom'
-import LogoImage from '../../Assets/LogoImage.jpg';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import LogoImage from '../../Assets/LogoImage.jpg'; 
+import './Sidebar.css' 
 
-export const Sidebar = () => {
+export const Sidebar = () => { 
+    return ( 
+        <div className='main-div' >
 
-    return (
-        <div style={{
-            backgroundColor: '#3795D3',
-            marginLeft: '20px',
-            paddingLeft: '30px',
-            width: '150px',
-            height: '350px',
-            textAlign: 'center',
-            borderBottomRightRadius: '15px',
-            borderBottomLeftRadius: '15px',
-            position: 'relative',
+            {/* Logo Container */}
+            <div className='logo-container' >
 
-        }}>
-            <div style={{
-                backgroundColor: '#072F60',
-                // paddingTop: '10px',
-                // display: "flex",
-                // justifyContent: 'center',
-                // alignItems: 'center',
-                // height: '100px',
-                borderRadius: '50%',
-                marginBottom: '50px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '100px',
-            }} >
-                <img style={{
-                    // display: 'block',
-                    // width: '80px',
-                    // height: '80px',
-                    // backgroundColor: '#072F60',
-                    // borderRadius: '50%',
-                    // objectFit: 'cover',
-                    width: '80px', 
-                    height: '80px', 
-                    borderRadius: '50%', 
-                    objectFit: 'cover',
+                <img className='imag'    src={LogoImage} alt="logo"/>
 
-                }}
-                    src={LogoImage} alt="logo"
-                />
             </div>
-                <Link to='/' style={{ color: 'white', textDecoration: 'none', display: 'flex', marginBottom: '10px', paddingTop: '15px', }}>Home</Link>
-                <Link to='/about' style={{ color: 'white', textDecoration: 'none', display: 'flex', marginBottom: '10px' }}>About Us</Link>
-                <Link to='/services' style={{ color: 'white', textDecoration: 'none', display: 'flex', marginBottom: '10px' }}>Services</Link>
-                <Link to='/clients' style={{ color: 'white', textDecoration: 'none', display: 'flex', marginBottom: '10px' }}>Clients</Link>
-                <Link to='/contact' style={{ color: 'white', textDecoration: 'none', display: 'flex', marginBottom: '10px' }}>Contact</Link>
 
+            {/* Links Container */}
+            <div className='link-container'>
 
+                <Link to="/" className='all-links'
+                    onMouseEnter={(e) => e.target.style.backgroundColor = '#072F60'}
+                    onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
+                >
+                    Home
+                </Link>
+
+                <Link to="/about" className='all-links'
+                    
+                    onMouseEnter={(e) => e.target.style.backgroundColor = '#072F60'}
+                    onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
+                >
+                    About Us
+                </Link>
+
+                <Link to="/services" className='all-links'
+                   
+                    onMouseEnter={(e) => e.target.style.backgroundColor = '#072F60'}
+                    onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
+                >
+                    Services
+                </Link>
+
+                <Link to="/clients" className='all-links'
+                    
+                    onMouseEnter={(e) => e.target.style.backgroundColor = '#072F60'}
+                    onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
+                >
+                    Clients
+                </Link>
+
+                <Link to="/contact" className='all-links'
+                   
+                    onMouseEnter={(e) => e.target.style.backgroundColor = '#072F60'}
+                    onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
+                >
+                    Contact
+                </Link>
+            </div>
         </div>
     )
 };
-

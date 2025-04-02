@@ -22,12 +22,12 @@ import MyFirstApp from "./Components/Muawia/MyFirstApp";
 import UncontrolledComponent from "./Components/Hooks/UncontrolledComponent";
 // import ToDoList from "./Components/Hooks/ToDoList";
 
-function App() {
+function App() { 
   return ( 
     <> 
     {/* <ToDoList /> */}
-    <UncontrolledComponent />
-    {/* <MyFirstApp /> */}
+    {/* <UncontrolledComponent /> */}
+    <MyFirstApp />
     {/* <Booting /> */}
     {/* <MyForm /> */}
     {/* <FormYup /> */}
